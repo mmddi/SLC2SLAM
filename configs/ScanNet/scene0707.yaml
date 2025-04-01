@@ -1,0 +1,17 @@
+inherit_from: configs/ScanNet/scannet.yaml
+mapping:
+  bound: [[-0.1,8.6],[-0.1,8.9],[-0.3,3.3]]
+  marching_cubes_bound: [[-0.1,8.6],[-0.1,8.9],[-0.3,2.5]]
+  keyframe_every: 5
+
+grid:
+  hash_size: 16 # 1.59M
+  
+
+data:
+  datadir: ./data/ScanNet/scene0707_00
+  trainskip: 1
+  output: output/scannet_coslam/scene0707_00
+  exp_name: demo
+  sem: sem/scannet/scene0707_00
+  ignored_labels: [ 0 ]

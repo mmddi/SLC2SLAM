@@ -1,0 +1,149 @@
+dataset: 'scannet'
+
+data:
+  downsample: 1
+  sc_factor: 1
+  translation: 0
+  num_workers: 4
+  sem_class_count: 20
+  code1_name: voxel_code
+  code2_name: geom_feature
+  trainskip: 1
+  exp_name: demo
+  exp_name1: demo_sem
+  ignored_labels: [ 0 ]
+
+mapping:
+  sample: 1024
+  first_mesh: True
+  iters: 10
+  cur_frame_iters: 0
+  lr_embed: 0.01
+  lr_decoder: 0.01
+  lr_rot: 0.001
+  lr_trans: 0.001
+  lr_sem: 0.05
+  keyframe_every: 5
+  map_every: 5
+  n_pixels: 0.05
+  first_iters: 500
+  optim_cur: False
+  min_pixels_cur: 20
+  map_accum_step: 1
+  pose_accum_step: 5
+  map_wait_step: 0
+  filter_depth: False
+  bound: [ [ -0.1,8.6 ],[ -0.1,8.9 ],[ -0.3,3.3 ] ]
+  marching_cubes_bound: [ [ -0.1,8.6 ],[ -0.1,8.9 ],[ -0.3,2.5 ] ]
+
+tracking:
+  iter: 10
+  sample: 1024
+  pc_samples: 40960
+  lr_rot: 0.001
+  lr_trans: 0.001
+  ignore_edge_W: 20
+  ignore_edge_H: 20
+  iter_point: 0
+  wait_iters: 100
+  const_speed: True
+  best: True
+
+grid:
+  enc: 'HashGrid'
+  tcnn_encoding: True
+  hash_size: 16
+  voxel_color: 0.08
+  voxel_sdf: 0.04
+  oneGrid: True
+
+pos:
+  enc: 'OneBlob'
+  n_bins: 16
+
+decoder:
+  geo_feat_dim: 15
+  hidden_dim: 32
+  num_layers: 2
+  hidden_dim_semantic: 32
+  num_layers_semantic: 4
+  num_layers_color: 2
+  hidden_dim_color: 32
+  tcnn_network: False
+
+
+cam:
+  H: 480
+  W: 640
+  fx: 577.590698
+  fy: 578.729797
+  cx: 318.905426
+  cy: 242.683609
+  png_depth_scale: 1000.
+  crop_edge: 10
+  near: 0
+  far: 8
+  depth_trunc: 100.
+
+training:
+  rgb_weight: 5.0
+  depth_weight: 0.1
+  sdf_weight: 1000
+  fs_weight: 10
+  eikonal_weight: 0
+  smooth_weight: 0.001 #0.001
+  sem_weight: 10
+  smooth_pts: 64
+  smooth_vox: 0.1
+  smooth_margin: 0.05
+  #n_samples: 256
+  n_samples_d: 96
+  n_samples_da: 48
+  range_d: 0.25
+#  range_da: 0.15
+  n_range_d: 21
+#  n_range_da: 11
+  n_importance: 0
+  perturb: 1
+  white_bkgd: False
+  trunc: 0.1
+  rot_rep: 'quat'
+  rgb_missing: 0.0
+
+mesh:
+  resolution: 512
+  render_color: False
+  vis: 500
+  voxel_eval: 0.05
+  voxel_final: 0.03
+  visualisation: False
+
+render:
+    N_rays: 32*32*1  # average number of rays sampled from each sample within a batch
+    N_samples: 64  # Number of different times to sample along each ray.
+    N_importance: 128  # Number of additional fine samples per ray
+    perturb: 1
+    use_viewdirs: true
+    i_embed: 0 # 'set 0 for default positional encoding, -1 for none'
+    multires: 10  # log2 of max freq for positional encoding (3D location)'
+    multires_views: 4  # 'log2 of max freq for positional encoding (2D direction)'
+    raw_noise_std: 1  # 'std dev of noise added to regularize sigma_a output, 1e0 recommended')
+    test_viz_factor: 1  # down scaling factor when rendering test and training images
+    no_batching: True  # True-sample random pixels from random images; False-sample from all random pixels from all images
+    depth_range: [ 0.1, 10.0 ]
+    white_bkgd: false
+
+experiment:
+  enable_semantic: True
+  width: 320
+  height: 240
+
+
+model:
+  netdepth: 8
+  netwidth: 256
+  netdepth_fine: 8
+  netwidth_fine: 256
+  chunk: 1024*128  # number of rays processed in parallel, decrease if running out of memory
+  netchunk: 1024*128  # number of pts sent through network in parallel, decrease if running out of memory
+  num_classes: 40
