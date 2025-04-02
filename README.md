@@ -4,7 +4,10 @@
   <a href="https://ieeexplore.ieee.org/document/10935649" style="font-size:16px; text-decoration:none;">Paper</a>
 </p>
 
-![描述文本](images/your_image.png)
+<p align="center">
+    <img src="" width="400">
+</p>
+
 
 <p>This repository contains the code for the paper SLC<sup>2</sup>-SLAM: Semantic-guided Loop Closure using Shared Latent Code for NeRF SLAM.</p>
 
