@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-    <img src="" width="400">
+    <img src="https://github.com/mmddi/SLC2SLAM/blob/main/TEASER/0054.png" width="800">
 </p>
 
 
