@@ -30,6 +30,8 @@ You can run  SLC<sup>2</sup>-SLAM using the code below:
 ```bash
 python slcslam.py --config './configs/ScanNet/scene0000.yaml'
 ```
+Here, the ScanNet dataset is used as an example; other datasets can be run with similar code.
+
 ## Evaluation
 Our tracking and reconstruction refer to the code provided by [Co-SLAM](https://github.com/JingwenWang95/neural_slam_eval).
 
