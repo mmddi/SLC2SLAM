@@ -7,11 +7,7 @@
 > [Yuhang Ming](), [Di Ma](https://github.com/mmddi), [Weichen Dai]()<br />
 > RAL 2025
 
-<p align="center">
-  <a href="">
-    <img src="./media/coslam_teaser.gif" alt="Logo" width="80%">
-  </a>
-</p>
+
 
 
 <p align="center">
@@ -21,8 +17,16 @@
 
 <p>This repository contains the code for the paper SLC<sup>2</sup>-SLAM: Semantic-guided Loop Closure using Shared Latent Code for NeRF SLAM.</p>
 
+## Environment
+```bash
+# conda environment
+conda create -n slcslam python=3.9
+conda activate slcslam
 
+# pytorch environment (Please check the cuda version)
+pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2 
 
+```
 
 ## Run
 
