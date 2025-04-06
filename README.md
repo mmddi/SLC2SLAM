@@ -21,6 +21,9 @@
 
 <p>This repository contains the code for the paper SLC<sup>2</sup>-SLAM: Semantic-guided Loop Closure using Shared Latent Code for NeRF SLAM.</p>
 
+
+
+
 ## Run
 
 You can run  SLC<sup>2</sup>-SLAM using the code below:
