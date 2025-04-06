@@ -4,7 +4,7 @@
 ### [Paper](https://ieeexplore.ieee.org/document/10935649) |
 
 > SLC<sup>2</sup>-SLAM: Semantic-guided Loop Closure using Shared Latent Code for NeRF SLAM <br />
-> [Yuhang Ming](), [Di Ma](https://github.com/mmddi), [Weichen Dai]()<br />
+> [Yuhang Ming](https://github.com/YuhangMing), [Di Ma](https://github.com/mmddi), [Weichen Dai]()<br />
 > RAL 2025
 
 
