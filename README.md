@@ -1,17 +1,21 @@
 # SLC<sup>2</sup>-SLAM: Semantic-guided Loop Closure using Shared Latent Code for NeRF SLAM
 
 
-### [Paper](https://ieeexplore.ieee.org/document/10935649) |
+### [Paper](https://ieeexplore.ieee.org/document/10935649) | [arXiv](https://arxiv.org/abs/2501.08880)
 
 > SLC<sup>2</sup>-SLAM: Semantic-guided Loop Closure using Shared Latent Code for NeRF SLAM <br />
-> [Yuhang Ming](https://github.com/YuhangMing), [Di Ma](https://github.com/mmddi), [Weichen Dai]()<br />
-> RAL 2025
+> [Yuhang Ming](https://yuhangming.github.io/), [Di Ma](https://github.com/mmddi), [Weichen Dai](), [Han Yang](), [Rui Fan](https://www.ruirangerfan.com/), [Guofeng Zhang](http://www.cad.zju.edu.cn/home/gfzhang/), [Wanzeng Kong](https://faculty.hdu.edu.cn/zzb/kwz/main.htm)<br />
+> RA-L 2025
 
 
 
 
 <p align="center">
     <img src="https://github.com/mmddi/SLC2SLAM/blob/main/TEASER/0054.png" width="800">
+</p>
+
+<p align="center">
+    <img src="https://github.com/mmddi/SLC2SLAM/blob/main/TEASER/sys-overview.png" width="800">
 </p>
 
 
